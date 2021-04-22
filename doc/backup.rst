@@ -110,7 +110,7 @@ Now we import the SQL database (the mysql container must be running):
     mysql -uroot -p # login to mysql prompt
     # here you type the password you put in MYSQL_ROOT_PASSWORD in the /etc/elabftw.yml file
     Mysql> drop database elabftw; # delete the brand new database
-    Mysql> create database elabftw character set utf8mb4 collate utf8mb4_0900_ai_ci; # create a new one
+    Mysql> create database elabftw character set utf8mb4 collate utf8mb4_0900_ai_ci; # create a new one. If you get "Unknown collation: 'utf8mb4_0900_ai_ci'" try utf8mb4_general_ci instead.
     Mysql> use elabftw; # select it
     Mysql> set names utf8; # make sure you import in utf8 (don't do this if you are in latin1)
     Mysql> source mysql_dump-YYYY-MM-DD.sql; # import the backup
